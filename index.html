@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download App APK</title>
+    <style>
+        /* CSS - Estilização */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+      img {
+        width: 80px;
+        height: 80px;
+      }
+
+        h1 { color: #333; font-size: 1.5rem; margin-bottom: 0.5rem; }
+        p { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+
+        .btn-download {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.2s, background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-download:hover {
+            background-color: #45a049;
+            transform: scale(1.05);
+        }
+
+        .btn-download:active {
+            transform: scale(0.98);
+        }
+
+        #status {
+            margin-top: 1rem;
+            font-size: 0.8rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon">
+            <img src="icone.png" alt="ícone">
+        </div>
+        <h1>WorkNow</h1>
+        <p>Versão mais recente: 1.0.2 (APK)<br>Tamanho: 6MB</p>
+         <h5>Está procurando um emprego? Então, vem pro WorkNow!
+            Com o WorkNow você gera seu currículo na palma da mão e consolida seu lugar no mercado de trabalho.</h5></p>
+        
+        <a href="WorkNow.apk" download id="downloadBtn" class="btn-download">
+            Baixar Agora
+        </a>
+       
+
+        <div id="status"></div>
+    </div>
+
+    <script>
+        // JS - Lógica simples de feedback
+        const btn = document.getElementById('downloadBtn');
+        const status = document.getElementById('status');
+
+        btn.addEventListener('click', () => {
+            status.innerText = "O download iniciará em instantes...";
+            
+            // Simulação de log ou analytics
+            console.log("Download solicitado em: " + new Date().toLocaleString());
+            
+            // Opcional: Voltar o texto após alguns segundos
+            setTimeout(() => {
+                status.innerText = "Se o download não começar, verifique as permissões do navegador.";
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>
